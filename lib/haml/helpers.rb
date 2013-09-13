@@ -613,9 +613,7 @@ MESSAGE
       # @param text [String] The string to sanitize
       # @return [String] The sanitized string
       def escape_once(text)
-        text = text.to_s
-        text.gsub!(HTML_ESCAPE_ONCE_REGEX, HTML_ESCAPE)
-        text
+        text.to_s.gsub(HTML_ESCAPE_ONCE_REGEX, HTML_ESCAPE)
       end
     else
       def escape_once(text)
